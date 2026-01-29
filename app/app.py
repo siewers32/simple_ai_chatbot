@@ -28,7 +28,7 @@ while True:
 
     # 4. Roep de OpenAI API aan
     response = client.chat.completions.create(
-        model="openai/qwen3-4b-mlx", 
+        model=os.getenv("LLM_MODEL"), 
         messages=messages
     )
 
