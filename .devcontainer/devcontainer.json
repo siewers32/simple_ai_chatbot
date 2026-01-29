@@ -1,0 +1,24 @@
+{
+  "name": "Python Compose Dev",
+  // Wijs naar je compose bestand
+  "dockerComposeFile": "../docker-compose.yml",
+  // De naam van de service in docker-compose.yml waar VS Code in moet draaien
+  "service": "app",
+  // De map waar VS Code moet openen in de container
+  "workspaceFolder": "/home/appuser/app",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+
+  // Optioneel: stop de containers als je VS Code afsluit
+  "shutdownAction": "stopCompose"
+}
